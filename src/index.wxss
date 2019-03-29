@@ -4,3 +4,19 @@
 .index {
   color: green;
 }
+
+.datepicker {
+  background: #333;
+  color: #fff;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  width: calc(100% / 7);
+  text-align: center;
+}

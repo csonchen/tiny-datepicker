@@ -1,1 +1,13 @@
-<view class="index other">{{prop}}-{{flag}}</view>
+<view class="datepicker">
+  <view class="datepicker-header">2019-03-25</view>
+  <view class="datepicker-body">
+    <view class="flex weekday-list">
+      <view class="flex-item weekday-item" wx:for="{{weekday}}" wx:key="index" wx:for-item="item">
+        {{item}}
+      </view>
+    </view>
+    <view class="flex datelist">
+      <view class="flex-item dateitem"></view>
+    </view>
+  </view>  
+</view>
