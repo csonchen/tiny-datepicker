@@ -1,13 +1,22 @@
-<view class="datepicker">
-  <view class="datepicker-header">2019-03-25</view>
-  <view class="datepicker-body">
-    <view class="flex weekday-list">
-      <view class="flex-item weekday-item" wx:for="{{weekday}}" wx:key="index" wx:for-item="item">
-        {{item}}
+<view class="container">
+  <view class="date-display flex">
+    <view class="next-prev">
+      <view class="arrow prev" bindtap="changeMonth" id="prev"></view>
+    </view>
+    <view class="selected-date">{{currYear}}年{{currMonth}}月{{selected[2]}}日 周{{dayInWeek}}</view>
+    <view class="next-prev">
+      <view class="arrow next" bindtap="changeMonth" id="next"></view>
+    </view>
+  </view>
+  <view class="week-display flex">
+    <view wx:for="{{week}}" wx:key="idx" class="week-cell {{item.class}}">{{item.value}}</view>
+  </view>
+  <view class="date-picker">
+    <view class="flex">
+      <view wx:for="{{emptyGrids}}" wx:key="*this" class="date-cell"></view>
+      <view wx:for="{{days}}" wx:key="idx" class="date-cell" bindtap="selectDate" data-selected="{{[currYear, currMonth, item.value]}}">
+        <view class="{{item.class}}{{selected[2] == item.value ? ' selected': ''}}" data-selected="{{[currYear, currMonth, item.value]}}">{{item.value}}</view>
       </view>
     </view>
-    <view class="flex datelist">
-      <view class="flex-item dateitem"></view>
-    </view>
-  </view>  
+  </view>
 </view>
