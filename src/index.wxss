@@ -17,7 +17,7 @@
   width: 100%;
   height: 90rpx;
   line-height: 80rpx;
-  color: #F44336;
+  color: #FED224;
 }
 
 .week-cell {
@@ -40,7 +40,7 @@
 .arrow {
   height: 25rpx;
   width: 25rpx;
-  border: solid #F44336;
+  border: solid #FED224;
   border-width: 0 6rpx 6rpx 0;
   margin: 22.5rpx auto;
 }
@@ -92,10 +92,10 @@
 }
 
 .today {
-  color: #F44336;
+  color: #FED224;
 }
 
 .today-selected {
   color: white;
-  background-color: #F44336;
+  background-color: #FED224;
 }
